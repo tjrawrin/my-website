@@ -1,0 +1,4 @@
+baseURL = "https://timothywarrington.com/"
+languageCode = "en-us"
+title = "Timothy Warrington"
+disableHugoGeneratorInject = true

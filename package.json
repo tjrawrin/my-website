@@ -1,0 +1,38 @@
+{
+  "name": "timothywarrington",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "run-p all:clean dev:webpack dev:hugo",
+    "dev:hugo": "hugo server --buildDrafts --renderToDisk",
+    "dev:webpack": "webpack --watch --mode=development",
+    "build": "run-s all:clean build:webpack build:hugo",
+    "build:hugo": "hugo -d public",
+    "build:webpack": "webpack --mode=production",
+    "all:clean": "rm -rf public && rm -rf static/assets && rm -f data/manifest.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.0.1",
+    "css-loader": "^1.0.0",
+    "mini-css-extract-plugin": "^0.4.1",
+    "npm-run-all": "^4.1.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.0",
+    "postcss-loader": "^2.1.6",
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-manifest-plugin": "^2.0.3"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

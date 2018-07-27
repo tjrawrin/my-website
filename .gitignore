@@ -1,0 +1,5 @@
+node_modules/
+static/assets
+data/manifest.json
+public/
+
