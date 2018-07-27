@@ -54,8 +54,10 @@ ul {
 }
 
 svg {
-  height: 1.6rem;
   stroke: #333333;
-  vertical-align: -0.2rem;
-  width: 1.6rem;
+  vertical-align: -0.6rem;
+}
+
+span {
+  margin-left: 0.6rem;
 }
