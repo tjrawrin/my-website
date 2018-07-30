@@ -61,3 +61,7 @@ svg {
 span {
   margin-left: 0.6rem;
 }
+
+#version {
+  margin-left: 0;
+}

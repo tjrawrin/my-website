@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = (env, argv) => {
@@ -9,7 +10,7 @@ module.exports = (env, argv) => {
   return {
     mode: argv.mode,
     entry: {
-      main: ['./assets/stylesheets/main.css'],
+      main: ['./assets/javascripts/main.js', './assets/stylesheets/main.css'],
     },
     output: {
       filename: devMode ? '[name].js' : '[name].[chunkhash:8].js',
@@ -17,6 +18,11 @@ module.exports = (env, argv) => {
     },
     module: {
       rules: [
+        {
+          test: /\.js$/,
+          include: path.resolve(__dirname, 'assets'),
+          use: 'babel-loader',
+        },
         {
           test: /\.css$/,
           include: path.resolve(__dirname, 'assets'),
@@ -41,7 +47,7 @@ module.exports = (env, argv) => {
           }),
     ].filter(Boolean),
     optimization: {
-      minimizer: [new OptimizeCSSAssetsPlugin({})],
+      minimizer: [new OptimizeCSSAssetsPlugin({}), new UglifyWebpackPlugin({})],
     },
   };
 };
