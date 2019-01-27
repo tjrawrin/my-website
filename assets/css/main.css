@@ -140,14 +140,20 @@ img {
 }
 
 .SkillList-itemIcon {
+  animation: fade 1s 1 .5s;
+  animation-fill-mode: both;
   stroke: hsla(0, 0%, 100%, 0.87);
   min-height: 2.4rem;
   margin-left: 1.2rem;
   min-width: 2.4rem;
+  opacity: 0;
 }
 
 .SkillList-itemText {
+  animation: fade 1s 1 .5s;
+  animation-fill-mode: both;
   margin-left: 1.2rem;
+  opacity: 0;
 }
 
 .SkillList-itemProgress {
@@ -174,29 +180,35 @@ img {
 /**
  * Animations
  */
+@keyframes fade {
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes expand {
-    0% {
-        width: 0;
-    }
+  0% {
+    width: 0;
+  }
 }
 
 @keyframes rainbow {
-    0%, 100% {
-	    background-color: #fea3aa;
-    }
-    16% {
-        background-color: #f8b88b;
-    }
-    32% {
-        background-color: #faf884;
-    }
-    48% {
-        background-color: #baed91;
-    }
-    64% {
-        background-color: #b2cefe;
-    }
-    80% {
-        background-color: #f2a2e8;
-    }
+  0%, 100% {
+    background-color: #fea3aa;
+  }
+  16% {
+    background-color: #f8b88b;
+  }
+  32% {
+    background-color: #faf884;
+  }
+  48% {
+    background-color: #baed91;
+  }
+  64% {
+    background-color: #b2cefe;
+  }
+  80% {
+    background-color: #f2a2e8;
+  }
 }
