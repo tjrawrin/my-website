@@ -12,7 +12,7 @@ module.exports = (env, argv) => {
     mode: argv.mode,
     devtool: devMode ? 'cheap-eval-source-map' : 'source-map',
     entry: {
-      main: ['./assets/javascripts/main.js', './assets/stylesheets/main.css'],
+      main: ['./assets/js/main.js', './assets/css/main.css'],
     },
     output: {
       filename: devMode ? 'js/[name].js' : 'js/[name].[chunkhash:8].js',
@@ -51,7 +51,7 @@ module.exports = (env, argv) => {
           ? 'css/[id].css'
           : 'css/[id].[contenthash:8].css',
       }),
-      ManifestPlugin({
+      new ManifestPlugin({
         publicPath: 'assets/',
         fileName: path.resolve(__dirname, 'data/manifest.json'),
       }),

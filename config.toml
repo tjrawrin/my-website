@@ -2,3 +2,4 @@ baseURL = "https://timothywarrington.com/"
 languageCode = "en-us"
 title = "Timothy Warrington"
 disableHugoGeneratorInject = true
+disableKinds = ["taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT"]
