@@ -10,7 +10,7 @@
     "build": "run-s clean build:webpack build:hugo",
     "build:hugo": "hugo --minify",
     "build:webpack": "webpack --mode production",
-    "clean": "rm -rf public resources static/assets data/manifest.json"
+    "clean": "rm -rf public resources data/manifest.json static/assets"
   },
   "author": "Timothy Warrington",
   "license": "ISC",
@@ -44,5 +44,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "dependencies": {}
 }
