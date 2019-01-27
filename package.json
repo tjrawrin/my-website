@@ -1,43 +1,44 @@
 {
   "name": "my-website",
   "version": "2.0.0",
-  "description": "",
+  "description": "My personal website.",
   "main": "index.js",
   "scripts": {
-    "dev": "run-p all:clean dev:webpack dev:hugo",
-    "dev:hugo": "hugo server --buildDrafts --renderToDisk",
-    "dev:webpack": "webpack --watch --mode=development",
-    "build": "run-s all:clean build:webpack build:hugo",
-    "build:hugo": "hugo -d public",
-    "build:webpack": "webpack --mode=production",
-    "all:clean": "rm -rf public && rm -rf static/assets && rm -f data/manifest.json"
+    "start": "run-p clean start:webpack start:hugo",
+    "start:hugo": "hugo server --renderToDisk --disableFastRender -DF",
+    "start:webpack": "webpack --watch --mode development",
+    "build": "run-s clean build:webpack build:hugo",
+    "build:hugo": "hugo --minify",
+    "build:webpack": "webpack --mode production",
+    "clean": "rm -rf public resources static/assets data/manifest.json"
   },
-  "author": "",
+  "author": "Timothy Warrington",
   "license": "ISC",
-  "dependencies": {
-    "autoprefixer": "^9.0.2",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
-    "css-loader": "^1.0.0",
-    "mini-css-extract-plugin": "^0.4.1",
-    "npm-run-all": "^4.1.3",
-    "optimize-css-assets-webpack-plugin": "^5.0.0",
-    "postcss-loader": "^2.1.6",
-    "uglifyjs-webpack-plugin": "^1.2.7",
-    "webpack": "^4.16.3",
-    "webpack-cli": "^3.1.0",
-    "webpack-manifest-plugin": "^2.0.3"
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "autoprefixer": "^9.4.6",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "npm-run-all": "^4.1.5",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-fix-style-only-entries": "^0.1.0",
+    "webpack-manifest-plugin": "^2.0.4"
+  },
+  "babel": {
+    "presets": [
+      "env@babel/preset-env"
+    ]
   },
   "postcss": {
     "plugins": {
       "autoprefixer": {}
     }
-  },
-  "babel": {
-    "presets": [
-      "env"
-    ]
   },
   "browserslist": [
     "> 1%",
