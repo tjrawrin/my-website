@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <title>{{ .Site.Title }}</title>
+    <link
+      rel="stylesheet"
+      href="{{- (index $.Site.Data.manifest &quot;main.css&quot;) | relURL -}}"
+    />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <title>🗲 {{ .Site.Title }} 🗲</title>
-    <link rel="stylesheet" href='{{- partial "asset" (dict "Site" .Site "Asset" "main.css") -}}'>
-</head>
-
-<body itemscope itemtype="https://schema.org/Person" role="main">
+  <body itemscope itemtype="https://schema.org/Person" role="main">
     {{- block "main" . -}} {{- end -}}
-    <script src='{{- partial "asset" (dict "Site" .Site "Asset" "main.js") -}}'></script>
-</body>
-
+    <script src="{{- (index $.Site.Data.manifest &quot;main.js&quot;) | relULR -}}"></script>
+  </body>
 </html>

@@ -1,9 +1,0 @@
-{{- if in (string .Site.BaseURL) "localhost" -}}
-<!---->
-{{- print "assets/" .Asset | relURL -}}
-<!---->
-{{- else -}}
-<!---->
-{{- index .Site.Data.manifest .Asset | relURL -}}
-<!---->
-{{- end -}}
