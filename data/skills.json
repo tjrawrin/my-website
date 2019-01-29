@@ -17,6 +17,10 @@
       "proficiency": 90
     },
     {
+      "name": "TypeScript",
+      "proficiency": 25
+    },
+    {
       "name": "React",
       "proficiency": 60
     },
