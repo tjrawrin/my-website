@@ -1,1 +1,6 @@
-<h1>Hello</h1>
+<img src="images/me.jpg" alt="" aria-hidden="true" role="presentation" />
+<h1>Timothy Warrington</h1>
+<ul>
+  <li><a href="https://github.com/tjrawrin" target="_blank" rel="nofollow noreferrer noopener">GitHub</a></li>
+  <li><a href="https://linkedin.com/in/timothywarrington" target="_blank" rel="nofollow noreferrer noopener">LinkedIn</a></li>
+</ul>
