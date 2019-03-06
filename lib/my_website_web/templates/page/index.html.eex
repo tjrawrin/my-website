@@ -1,4 +1,4 @@
-<img src="images/me.jpg" alt="" aria-hidden="true" role="presentation" />
+<img src='<%= Routes.static_path(@conn, "/images/me.jpg") %>' alt="" aria-hidden="true" role="presentation" />
 <h1>Timothy Warrington</h1>
 <ul>
   <li><a href="https://github.com/tjrawrin" target="_blank" rel="nofollow noreferrer noopener">GitHub</a></li>
