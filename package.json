@@ -1,0 +1,25 @@
+{
+  "name": "my_website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "My website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "rm -rf dist && parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjrawrin/my-website.git"
+  },
+  "keywords": [],
+  "author": "Tim Warrington <tim.warrin@gmail.com> (https://timothywarrington.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tjrawrin/my-website/issues"
+  },
+  "homepage": "https://github.com/tjrawrin/my-website#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0"
+  }
+}
