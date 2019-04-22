@@ -57,7 +57,6 @@ body {
   font-size: 1.6rem;
   height: 100%;
   line-height: 1.75;
-  overflow-y: scroll;
 }
 
 img {
@@ -102,4 +101,44 @@ a:visited {
 
 a:hover {
   text-decoration: underline;
+}
+
+.container {
+  position: relative;
+}
+
+.eyes {
+  display: none;
+}
+
+@media (min-width: 215px) {
+  .eyes {
+    display: flex;
+    justify-content: space-between;
+    left: 34%;
+    line-height: 0;
+    position: absolute;
+    top: 33%;
+    width: 6.4rem;
+  }
+
+  .eye {
+    background: #efefef;
+    border-radius: 50%;
+    display: inline-block;
+    height: 2.4rem;
+    position: relative;
+    width: 2.4rem;
+  }
+  
+  .eye:after {
+    background: #000;
+    border-radius: 50%;
+    bottom: 1.2rem;
+    content: "";
+    height: 1rem;
+    position: absolute;
+    right: 0.8rem;
+    width: 1rem;
+  }
 }
