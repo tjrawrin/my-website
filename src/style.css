@@ -1,3 +1,11 @@
+:root {
+  --background: #fff;
+  --text: #111;
+  --link: #0074d9;
+  --eye: #efefef;
+  --pupil: #000;
+}
+
 /**
  * Reset styles
  */
@@ -52,8 +60,8 @@ html {
 }
 
 body {
-  background-color: #ffffff;
-  color: #111111;
+  background-color: var(--background);
+  color: var(--text);
   font-size: 1.6rem;
   height: 100%;
   line-height: 1.75;
@@ -96,7 +104,8 @@ li {
 
 a:link,
 a:visited {
-  color: #0074d9;
+  color: var(--link);
+  font-size: 1.8rem;
 }
 
 a:hover {
@@ -111,7 +120,12 @@ a:hover {
   display: none;
 }
 
-@media (min-width: 215px) {
+@media (min-width: 576px) {
+  a:link,
+  a:visited {
+    font-size: 1.6rem;
+  }
+
   .eyes {
     display: flex;
     justify-content: space-between;
@@ -123,7 +137,7 @@ a:hover {
   }
 
   .eye {
-    background: #efefef;
+    background: var(--eye);
     border-radius: 50%;
     display: inline-block;
     height: 2.4rem;
@@ -132,7 +146,7 @@ a:hover {
   }
   
   .eye:after {
-    background: #000;
+    background: var(--pupil);
     border-radius: 50%;
     bottom: 1.2rem;
     content: "";

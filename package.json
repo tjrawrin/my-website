@@ -1,12 +1,11 @@
 {
-  "name": "my_website",
+  "name": "my-website",
   "version": "1.0.0",
   "private": true,
   "description": "My website",
-  "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "rm -rf dist && parcel build index.html"
+    "serve": "rm -rf dist && parcel serve src/index.html && ./post-build.sh",
+    "build": "rm -rf dist && parcel build src/index.html && ./post-build.sh"
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,6 @@
   },
   "homepage": "https://github.com/tjrawrin/my-website#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.3"
+    "parcel": "^2.0.0-alpha.3.2"
   }
 }
