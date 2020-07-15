@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/tjrawrin/my-website#readme",
   "devDependencies": {
-    "parcel": "^2.0.0-alpha.3.2"
+    "parcel": "^2.0.0-nightly.338"
   }
 }
