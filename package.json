@@ -4,7 +4,7 @@
   "private": true,
   "description": "My website",
   "scripts": {
-    "serve": "rm -rf dist && parcel serve src/index.html && ./post-build.sh",
+    "start": "rm -rf dist && parcel serve src/index.html && ./post-build.sh",
     "build": "rm -rf dist && parcel build src/index.html && ./post-build.sh"
   },
   "repository": {
@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/tjrawrin/my-website#readme",
   "devDependencies": {
-    "parcel": "^2.0.0-nightly.338"
+    "parcel": "next"
   }
 }
