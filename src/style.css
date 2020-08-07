@@ -1,9 +1,12 @@
 :root {
-  --background: #fff;
-  --text: #111;
-  --link: #0074d9;
+  --background-mode-light: #fff;
+  --background-mode-dark: #111;
+  --text-mode-light: #111;
+  --text-mode-dark: #fff;
+  --link-mode-light: #0074d9;
+  --link-mode-dark: #3DA5FF;
   --eye: #efefef;
-  --pupil: #000;
+  --pupil: #111;
 }
 
 /**
@@ -59,8 +62,8 @@ html {
 }
 
 body {
-  background-color: var(--background);
-  color: var(--text);
+  background-color: var(--background-mode-light);
+  color: var(--text-mode-light);
   font-size: 1.6rem;
   height: 100%;
   line-height: 1.75;
@@ -74,6 +77,42 @@ img {
 /**
  * Site styles
  */
+body.light {
+  background-color: var(--background-mode-light);
+  color: var(--text-mode-light);
+}
+
+body.light a:link,
+body.light a:visited {
+  color: var(--link-mode-light);
+}
+
+body.dark {
+  background-color: var(--background-mode-dark);
+  color: var(--text-mode-dark);
+}
+
+body.dark a:link,
+body.dark a:visited {
+  color: var(--link-mode-dark);
+}
+
+header {
+  position: relative;
+}
+
+.theme-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 2.4rem;
+  line-height: 0;
+  position: absolute;
+  right: 1.2rem;
+  top: 1.2rem;
+  width: 2.4rem;
+}
+
 main {
   align-items: center;
   display: flex;
@@ -103,7 +142,6 @@ li {
 
 a:link,
 a:visited {
-  color: var(--link);
   font-size: 1.8rem;
 }
 
