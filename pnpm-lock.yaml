@@ -1309,8 +1309,8 @@ packages:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
 
-  rollup@2.77.3:
-    resolution: {integrity: sha512-/qxNTG7FbmefJWoeeYJFbHehJ2HNWnjkAFRKzWN/45eNBBF/r8lo992CwcJXEzyVxs5FmfId+vTSTQDb+bxA+g==}
+  rollup@2.79.2:
+    resolution: {integrity: sha512-fS6iqSPZDs3dr/y7Od6y5nha8dW1YnbgtsyotCVvoFGKbERG++CVRFv1meyGDE1SNItQA8BrnCw7ScdAhRJ3XQ==}
     engines: {node: '>=10.0.0'}
     hasBin: true
 
@@ -2125,7 +2125,7 @@ snapshots:
       recast: 0.20.5
       rehype: 12.0.1
       resolve: 1.22.1
-      rollup: 2.77.3
+      rollup: 2.79.2
       semver: 7.3.7
       shiki: 0.10.1
       sirv: 2.0.2
@@ -3288,7 +3288,7 @@ snapshots:
 
   reusify@1.0.4: {}
 
-  rollup@2.77.3:
+  rollup@2.79.2:
     optionalDependencies:
       fsevents: 2.3.2
 
@@ -3534,7 +3534,7 @@ snapshots:
       esbuild: 0.14.54
       postcss: 8.4.31
       resolve: 1.22.1
-      rollup: 2.77.3
+      rollup: 2.79.2
     optionalDependencies:
       fsevents: 2.3.2
 
